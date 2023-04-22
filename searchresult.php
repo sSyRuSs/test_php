@@ -81,6 +81,9 @@
                         ?>
                     </ul>
                 </li>
+                <?php
+                    $get_pro = $pro
+                ?>
                 <li class="nav-item">
                 <form class="d-flex mb-1 ms-2" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -91,7 +94,7 @@
         </div>
         <div class="row gx-4 gx-lg-5 mt-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <?php
-            $get_pro = $cat->get_product_by_cat($id);
+            $get_pro = $pro->search($tukhoa);
             if ($get_pro) {
                 while ($result = $get_pro->fetch_assoc()) {
             ?>
@@ -112,7 +115,7 @@
             <?php
                 }
             }else{
-                echo 'Category Not Avaiable';
+                echo 'Product Not Avaiable';
             }
             ?>
 
