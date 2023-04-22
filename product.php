@@ -65,9 +65,9 @@ include 'inc/header.php';
                     </ul>
                 </li>
                 <li class="nav-item">
-                <form class="d-flex mb-1 ms-2" role="search">
+                <form action="searchresult.php" class="d-flex mb-1 ms-2" role="search" method="POST">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
+                        <button class="btn btn-success" name="search_product" type="submit">Search</button>
                     </form>
                 </li>
             </ul>
