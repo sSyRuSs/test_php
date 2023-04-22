@@ -80,6 +80,7 @@
                         ?>
                     </ul>
                 </li>
+                
                 <li class="nav-item">
                 <form class="d-flex mb-1 ms-2" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -90,8 +91,8 @@
         </div>
         <div class="row gx-4 gx-lg-5 mt-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <?php
-            $get_pro = $brand->get_product_by_brand($id);
-            if ($get_pro) {
+            $get_pro = $pro->search_product($tukhoa);
+            if ($tukhoa) {
                 while ($result = $get_pro->fetch_assoc()) {
             ?>
                     <div class="col mb-5">
@@ -111,7 +112,7 @@
             <?php
                 }
             }else{
-                echo 'Brand Not Avaiable';
+                echo 'Product Not Avaiable';
             }
             ?>
 
