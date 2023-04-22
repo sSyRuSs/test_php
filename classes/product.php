@@ -147,6 +147,14 @@ class Product
         return $result;
     }
 
+    public function search_product($tukhoa){
+        $tukhoa = $this->fm->validation($tukhoa);
+        $query = "SELECT * FROM tbl_product WHERE productName LIKE '%$tukhoa%'";
+        $result = $this->db->select($query);
+        return $result;
+
+    }
+    
     // public function insert_pro($data, $files)
     // {
     //     // Kết nối đến cơ sở dữ liệu bằng PDO
