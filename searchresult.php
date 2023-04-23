@@ -1,18 +1,35 @@
-<?php include 'inc/header.php' ?>
-
-
-
-<header class="bg-dark py-5">
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $tukhoa = $_POST['tukhoa'];
-    $search_product = $product->search_product($tukhoa);
-}
+include 'inc/header.php';
+// include 'inc/slider.php';
 ?>
+
+
+<style>
+    .section-content {
+        margin-top: -50px;
+        /* khoảng cách giữa header và section */
+
+    }
+
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+    }
+</style>
+<header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white justify-content-center">
-            <h1 class="text-center justify-content-center display-4 fw-bolder"><?php echo $tukhoa ?></h1>
+        <?php
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                $tukhoa = $_POST['tukhoa'];
+                $search_product = $pro->search_product($tukhoa);
+            }
+            ?>
+            <h1 class="text-center justify-content-center display-4 fw-bolder"><?php echo $tukhoa?></h1>
             <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
         </div>
     </div>
@@ -24,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li class="nav-item">
                     <a class="nav-link text-dark" aria-current="page" href="product.php">ALL PRODUCTS</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle mt-auto text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">CATEGORIES</a>
 
@@ -57,18 +75,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </ul>
                 </li>
                 <li class="nav-item">
+
+
+
                     <form class="d-flex mb-1 ms-2" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" name="tukhoa" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" name="search_product" type="submit">Search</button>
                     </form>
                 </li>
             </ul>
         </div>
         <div class="row gx-4 gx-lg-5 mt-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <?php
-            $get_pro = $brand->get_product_by_brand($id);
-            if ($get_pro) {
-                while ($result = $get_pro->fetch_assoc()) {
+            if ($search_product) {
+                while ($result = $search_product->fetch_assoc()) {
             ?>
                     <div class="col mb-5">
                         <div class="card h-100" style="width: 18rem;">
@@ -87,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php
                 }
             } else {
-                echo 'Brand Not Avaiable';
+                echo 'Product Not Avaiable';
             }
             ?>
 
@@ -95,43 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </section>
 
-<div class="main">
-    <div class="content">
+<?php
+include 'inc/footer.php';
 
-        <div class="content_top">
-
-            <div class="heading">
-                <h3>Từ khóa tìm kiếm : </h3>
-            </div>
-
-            <div class="clear"></div>
-
-        </div>
-
-        <div class="section group">
-            <?php
-
-            if ($search_product) {
-                while ($result = $search_product->fetch_assoc()) {
-            ?>
-                    <div class="grid_1_of_4 images_1_of_4">
-                        <a href="preview-3.php"><img src="admin/uploads/<?php echo $result['image'] ?>" width="200px" alt="" /></a>
-                        <h2><?php echo $result['productName'] ?></h2>
-                        <p><?php echo $fm->textShorten($result['product_desc'], 50); ?></p>
-                        <p><span class="price"><?php echo $fm->format_currency($result['price']) . " " . "VNĐ" ?></span></p>
-                        <div class="button"><span><a href="details.php?proid=<?php echo $result['productId'] ?>" class="details">Details</a></span></div>
-                    </div>
-            <?php
-                }
-            } else {
-                echo 'Category Not Avaiable';
-            }
-            ?>
-        </div>
-
-
-
-    </div>
-</div>
-
-<? include 'inc/footer.php' ?>
+?>
