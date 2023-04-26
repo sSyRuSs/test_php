@@ -43,8 +43,8 @@
                                 Products
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="proList.php">Products List </a></li>
-                                <li><a class="dropdown-item" href="addPro.php">Add Product</a></li>
+                                <li><a class="dropdown-item" href="prolist.php">Products List </a></li>
+                                <li><a class="dropdown-item" href="addpro.php">Add Product</a></li>
                             </ul>
                         </li>
 
@@ -54,8 +54,8 @@
                                 Brands
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="brandList.php">Brands List</a></li>
-                                <li><a class="dropdown-item" href="addBrand.php">Add Brand</a></li>
+                                <li><a class="dropdown-item" href="brandlist.php">Brands List</a></li>
+                                <li><a class="dropdown-item" href="addbrand.php">Add Brand</a></li>
                             </ul>
                         </li>
 
@@ -65,13 +65,13 @@
                                 Categories
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="catList.php">Catergories List</a></li>
-                                <li><a class="dropdown-item" href="addCat.php">Add Categories</a></li>
+                                <li><a class="dropdown-item" href="catlist.php">Catergories List</a></li>
+                                <li><a class="dropdown-item" href="addcat.php">Add Categories</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="userList.php">Account</a>
+                            <a class="nav-link" href="userlist.php">Account</a>
                         </li>
  <!-- #region -->
                     </ul>

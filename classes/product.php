@@ -149,7 +149,7 @@ class Product
 
     public function search_product($tukhoa){
         $tukhoa = $this->fm->validation($tukhoa);
-        $query = "SELECT * FROM tbl_product WHERE productName LIKE '%$tukhoa%'";
+        $query = "SELECT * FROM tbl_product WHERE proName LIKE '%$tukhoa%'";
         $result = $this->db->select($query);
         return $result;
 

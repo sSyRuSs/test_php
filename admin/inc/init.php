@@ -4,7 +4,7 @@
     <div class="card h-100">
       <img src="../assest/image4.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title text-center"><a href="proList.php" class="">Products</a></h5>
+        <h5 class="card-title text-center"><a href="prolist.php" class="">Products</a></h5>
         <p class="card-text text-center">Manage Products</p>
       </div>
     </div>
@@ -13,7 +13,7 @@
     <div class="card h-100">
       <img src="../assest/image5.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title text-center"><a href="brandList.php" class="">Brand</a></h5>
+        <h5 class="card-title text-center"><a href="brandlist.php" class="">Brand</a></h5>
         <p class="card-text text-center">Manage Brands</p>
       </div>
     </div>
@@ -22,7 +22,7 @@
     <div class="card h-100">
       <img src="../assest/image3.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title text-center"><a href="catList.php" class="">Category</a></h5>
+        <h5 class="card-title text-center"><a href="catlist.php" class="">Category</a></h5>
         <p class="card-text text-center">Manage Category</p>
       </div>
     </div>

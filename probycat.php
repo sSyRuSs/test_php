@@ -82,9 +82,9 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                <form class="d-flex mb-1 ms-2" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
+                <form action="searchresult.php" method="POST" class="d-flex mb-1 ms-2" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" name="tukhoa" aria-label="Search">
+                        <button class="btn btn-success" nane="search_product" type="submit">Search</button>
                     </form>
                 </li>
             </ul>
