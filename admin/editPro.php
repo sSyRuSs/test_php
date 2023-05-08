@@ -26,7 +26,14 @@
 <?php
     
 ?>
-<h2 class="mt-5 mx-auto">EDIT PRODUCT</h2>
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white justify-content-center">
+            <h1 class="display-4 fw-bolder">EDIT PRODUCT</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+    </div>
+</header>
 <?php
         if(isset($editPro)){
             echo $editPro;
@@ -41,7 +48,7 @@
     <div class="row">
         <div class="col-md-6">
             <label for="proName">Product Name</label>
-            <input class="form-control" type="text" name="proName" value="<?php echo$result_pro['proName'] ?>"/>
+            <input class="form-control" type="text" name="proName" value="<?php echo $result_pro['proName'] ?>"/>
         </div>
 
         <div class="col-md-6">
@@ -106,7 +113,7 @@
     <div class="row">
     <div class="col-md-6">
             <label for="ProDes">Description</label>
-            <input class="form-control" type="text" name="proDes" value="<?php echo$result_pro['proDes'] ?>"/>
+            <textarea class="form-control" type="text" name="proDes" value="<?php echo $result_pro['proDes']?>"></textarea>
         </div>
         <div class="col-md-6">
             <button type="submit" name="submit" class="btn btn-success mx-auto mt-4">Save</button>

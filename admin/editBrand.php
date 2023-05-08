@@ -20,7 +20,14 @@
         $editBrand = $brand->edit_brand($brandName,$id);
     }
 ?>
-<h2 class="mt-5 mx-auto">EDIT BRAND</h2>
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white justify-content-center">
+            <h1 class="display-4 fw-bolder">EDIT BRAND</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+    </div>
+</header>
         <?php
             if(isset($editBrand)){
                 echo $editBrand;

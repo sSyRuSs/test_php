@@ -13,7 +13,14 @@
     }
 ?>
 
-<h2 class="mt-5 text-center">ADD PRODUCT</h2>
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white justify-content-center">
+            <h1 class="display-4 fw-bolder">ADD PRODUCT</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+    </div>
+</header>
 <?php
         if(isset($insertPro)){
             echo $insertPro;
@@ -82,7 +89,7 @@
     <div class="row">
         <div class="col-md-6">
             <label>Description</label>
-            <input class="form-control" type="text" name="proDes" placeholder="Name" />
+            <textarea class="form-control" type="text" name="proDes" placeholder="Name"></textarea>
         </div>
 
         <div class="col-md-6">

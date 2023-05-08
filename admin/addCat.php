@@ -10,7 +10,14 @@
         $insertCat = $cat->insert_cat($catName);
     }
 ?>
-<h2 class="mt-5 mx-auto">ADD CATEGORY</h2>
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white justify-content-center">
+            <h1 class="display-4 fw-bolder">ADD CATEGORY</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+    </div>
+</header>
 <form action="addCat.php" method="post">
     <div class="row">
         <?php
