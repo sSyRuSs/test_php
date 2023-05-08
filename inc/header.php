@@ -70,7 +70,7 @@ $product = new Product();
                                 More
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="aboutus.php">About Us</a></li>
                                 <li><a class="dropdown-item" href="#">Policy Licenses and Terms</a></li>
                             </ul>
                         </li>

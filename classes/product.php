@@ -14,6 +14,7 @@ class Product
         $this->fm = new Format();
     }
 
+    //MySQLi//
     public function insert_pro($data, $files)
     {
         $proName = mysqli_real_escape_string($this->db->link, $data['proName']);
@@ -50,7 +51,7 @@ class Product
         }
     }
 
-    
+
 
     public function show_pro()
     {
@@ -153,25 +154,19 @@ class Product
         $result = $this->db->select($query);
         return $result;
 
-    }
-    
+    }  
+
+    //PDO//
     // public function insert_pro($data, $files)
     // {
-    //     // Kết nối đến cơ sở dữ liệu bằng PDO
-    //     $pdo = new PDO("mysql:host=localhost;dbname=php_btl1", "root", "");
+    //     $proName = $data['proName'];
+    //     $proPrice = $data['proPrice'];
+    //     $proQuantity = $data['proQuantity'];
+    //     $brand = $data['Brand'];
+    //     $category = $data['Category'];
+    //     $proDes = $data['proDes'];
 
-    //     // Chuẩn bị truy vấn SQL sử dụng các tham số truyền vào
-    //     $stmt = $pdo->prepare("INSERT INTO tbl_product (proName, proPrice, image, proQuantity, catID, brandID, proDes) VALUES (:proName, :proPrice, :image, :proQuantity, :category, :brand, :proDes)");
-    //     $stmt->bindParam(':proName', $proName);
-    //     $stmt->bindParam(':proPrice', $proPrice);
-    //     $stmt->bindParam(':image', $unique_image);
-    //     $stmt->bindParam(':proQuantity', $proQuantity);
-    //     $stmt->bindParam(':category', $category);
-    //     $stmt->bindParam(':brand', $brand);
-    //     $stmt->bindParam(':proDes', $proDes);
-
-    //     // Lấy thông tin về file tải lên và kiểm tra định dạng
-    //     $permited  = array('jpg', 'jpeg', 'png', 'gif');
+    //     $permited = array('jpg', 'jpeg', 'png', 'gif');
     //     $file_name = $_FILES['image']['name'];
     //     $file_size = $_FILES['image']['size'];
     //     $file_temp = $_FILES['image']['tmp_name'];
@@ -181,17 +176,21 @@ class Product
     //     $unique_image = substr(md5(time()), 0, 10) . '.' . $file_ext;
     //     $uploaded_image = "uploads/" . $unique_image;
 
-    //     // Kiểm tra xem tất cả các trường đều được nhập đầy đủ hay không
-    //     if (empty($proName) || empty($proPrice) || empty($file_name) || empty($proQuantity) || empty($category) || empty($brand) || empty($proDes)) {
-    //         $alert = "<span class='text-danger'>All fields must be not empty!<span>";
+    //     if ($proName == "" || $proPrice == "" || $file_name == "" || $proQuantity == "" || $category == "" || $brand == "" || $proDes == "") {
+    //         $alert = "<span class='text-danger'>All fields must not be empty!</span>";
     //         return $alert;
     //     } else {
-    //         // Lưu file được tải lên vào thư mục uploads
     //         move_uploaded_file($file_temp, $uploaded_image);
-
-    //         // Thực thi truy vấn và trả về kết quả
-    //         $stmt->execute();
-    //         $result = $stmt->rowCount();
+    //         $query = "INSERT INTO tbl_product(proName, proPrice, image, proQuantity, catID, brandID, proDes) VALUES (:proName, :proPrice, :image, :proQuantity, :category, :brand, :proDes)";
+    //         $stmt = $this->db->prepare($query);
+    //         $stmt->bindParam(':proName', $proName);
+    //         $stmt->bindParam(':proPrice', $proPrice);
+    //         $stmt->bindParam(':image', $unique_image);
+    //         $stmt->bindParam(':proQuantity', $proQuantity);
+    //         $stmt->bindParam(':category', $category);
+    //         $stmt->bindParam(':brand', $brand);
+    //         $stmt->bindParam(':proDes', $proDes);
+    //         $result = $stmt->execute();
     //         if ($result) {
     //             $alert = "<span class='text-success'>Insert successfully</span>";
     //             return $alert;

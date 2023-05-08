@@ -106,7 +106,7 @@
     <div class="row">
     <div class="col-md-6">
             <label for="ProDes">Description</label>
-            <input class="form-control" type="text" name="proDes" value="<?php  echo $result_pro['proDes']?>"/>
+            <input class="form-control" type="text" name="proDes" value="<?php echo$result_pro['proDes'] ?>"/>
         </div>
         <div class="col-md-6">
             <button type="submit" name="submit" class="btn btn-success mx-auto mt-4">Save</button>

@@ -60,5 +60,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit1'])) {
 
 
 <?php
-include '../BTL/inc/footer.php';
+include'./inc/footer.php'
 ?>
