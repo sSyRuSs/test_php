@@ -91,8 +91,8 @@
         </div>
         <div class="row gx-4 gx-lg-5 mt-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <?php
-            $get_pro = $pro->search_product($tukhoa);
-            if ($tukhoa) {
+            $get_pro = $brand->get_product_by_brand($id);
+            if ($get_pro) {
                 while ($result = $get_pro->fetch_assoc()) {
             ?>
                     <div class="col mb-5">
