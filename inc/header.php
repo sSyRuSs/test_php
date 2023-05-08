@@ -45,13 +45,13 @@ $product = new Product();
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand mx-auto" href="#">CỬA HÀNG ĐỒ CHƠI</a>
+            <a class="navbar-brand mx-auto" href="index.php">CỬA HÀNG ĐỒ CHƠI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header bg-dark">
-                    <a class="navbar-brand " href="#">CỬA HÀNG ĐỒ CHƠI</a>
+                    <a class="navbar-brand " href="index.php">CỬA HÀNG ĐỒ CHƠI</a>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body bg-dark">
@@ -75,9 +75,9 @@ $product = new Product();
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
+                    <form action="searchresult.php" method="POST" class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" name="tukhoa" aria-label="Search">
+                        <button class="btn btn-success" nane="search_product" type="submit">Search</button>
                     </form>
 
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
