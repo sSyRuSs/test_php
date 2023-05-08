@@ -1,5 +1,4 @@
 <!-- '8.2.0', -->
-<!-- '5.4.0' -->
 <?php 
 class Session{
     public static function init(){

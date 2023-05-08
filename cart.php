@@ -60,7 +60,14 @@ if (isset($delete_cart)) {
                 <td><?php echo $result['proName'];  ?></td>
                 <td><?php echo $result['proPrice'];  ?></td>
                 <td class="w-25"><img src="./admin/uploads/<?php echo $result['image'] ?>" class="img-thumbnail img-fluid" /></td>
-                <td><?php echo $result['proQuantity']; ?></td>
+                <td>
+                    <form action="" method="post">
+                    <input type="hidden" name="cartID" value="<?php echo $result['cartID'] ?>"/>
+                    <input class="btn btn-outline-success flex-shrink-0 me-3" id="inputQuantity" type="number" name="proQuantity" value="<?php echo $result['proQuantity']; ?>" min="1" style="max-width: 4rem" />
+                    <input class="btn btn-outline-primary flex-shrink-0 me-3" type="submit" value="Update" name="submit"/>
+                </form>
+                    
+                </td>
                 <td><?php $total = $result['proPrice'] * $result['proQuantity'];
                     echo $fm->format_currency($total) . " " . "VNĐ"; ?></td>
                 <td><a onclick="return confirm('Are you sure ?')" href="?cartID=<?php echo $result['cartID'] ?>">Delete</a></td>
