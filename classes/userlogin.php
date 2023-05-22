@@ -2,6 +2,7 @@
 $filepath = realpath(dirname(__FILE__));
 include_once($filepath . '/../lib/database.php');
 include_once($filepath . '/../helper/format.php');
+// include"./sendmail.php";
 ?>
 <?php
 class Userlogin
@@ -46,6 +47,7 @@ class Userlogin
         $userEmail = mysqli_real_escape_string($this->db->link, $data['userEmail']);
         $userPass = mysqli_real_escape_string($this->db->link, md5($data['userPass']));
 
+        
         if ($userName == "" || $address == "" || $city == "" || $country == "" || $userPhone == "" || $userEmail == "" || $userPass == "") {
             $alert = "<span class='text-danger'>All fields must be not empty!<span>";
             return $alert;
